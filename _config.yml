@@ -4,6 +4,7 @@ description: Eco-jardin & Biodiversité
 # If your repo is named "username.github.io", keep baseurl empty: ""
 # If your repo is named "my-project", set baseurl: "/my-project"
 baseurl: "" 
-url: "https://yourusername.github.io"
+url: "https://htdev-clients.github.io"
+baseurl: "/luscinia"
 plugins:
   - jekyll-seo-tag
