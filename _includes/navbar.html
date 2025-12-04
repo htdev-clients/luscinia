@@ -1,0 +1,38 @@
+<nav class="fixed w-full z-50 bg-sand/95 backdrop-blur-sm border-b border-earth-dark/10 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+            <!-- Logo -->
+            <a href="{{ site.baseurl }}/" class="flex-shrink-0 flex items-center cursor-pointer">
+                <i data-lucide="bird" class="h-8 w-8 text-earth-dark mr-2"></i>
+                <span class="font-serif text-2xl font-bold text-earth-dark tracking-wide">Luscinia</span>
+            </a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="{{ site.baseurl }}/" class="nav-link text-earth-dark font-medium tracking-wide">Accueil</a>
+                <a href="{{ site.baseurl }}/philosophie.html" class="nav-link text-earth-dark font-medium tracking-wide">Philosophie</a>
+                <a href="{{ site.baseurl }}/services.html" class="nav-link text-earth-dark font-medium tracking-wide">Services</a>
+                <a href="{{ site.baseurl }}/portfolio.html" class="nav-link text-earth-dark font-medium tracking-wide">Réalisations</a>
+                <a href="{{ site.baseurl }}/contact.html" class="px-5 py-2.5 bg-earth-dark text-sand font-medium rounded-full hover:bg-sage transition duration-300 shadow-md">Contact</a>
+            </div>
+
+            <!-- Mobile menu button -->
+            <div class="md:hidden flex items-center">
+                <button onclick="toggleMobileMenu()" class="text-earth-dark hover:text-sage focus:outline-none p-2">
+                    <i data-lucide="menu" class="h-6 w-6"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Panel -->
+    <div id="mobile-menu" class="hidden md:hidden bg-sand border-t border-gray-200 shadow-xl">
+        <div class="px-4 pt-4 pb-6 space-y-2">
+            <a href="{{ site.baseurl }}/" class="block px-4 py-3 text-base font-medium text-earth-dark hover:bg-sage/20 rounded-lg">Accueil</a>
+            <a href="{{ site.baseurl }}/philosophie.html" class="block px-4 py-3 text-base font-medium text-earth-dark hover:bg-sage/20 rounded-lg">Philosophie</a>
+            <a href="{{ site.baseurl }}/services.html" class="block px-4 py-3 text-base font-medium text-earth-dark hover:bg-sage/20 rounded-lg">Services</a>
+            <a href="{{ site.baseurl }}/portfolio.html" class="block px-4 py-3 text-base font-medium text-earth-dark hover:bg-sage/20 rounded-lg">Réalisations</a>
+            <a href="{{ site.baseurl }}/contact.html" class="block px-4 py-3 text-base font-medium text-earth-dark hover:bg-sage/10 rounded-lg">Contact</a>
+        </div>
+    </div>
+</nav>
