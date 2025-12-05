@@ -65,7 +65,6 @@
     }
 
     .hero-bg {
-      /* Note: In Jekyll, use relative paths or site.baseurl for images */
       background-image: linear-gradient(rgba(44, 62, 48, 0.5),
         rgba(44, 62, 48, 0.5)),
       url("{{ site.baseurl }}/images/hero.jpg");
@@ -116,18 +115,21 @@
       const currentPath = window.location.pathname;
       const navLinks = document.querySelectorAll(".nav-link, #mobile-menu a");
 
+      const baseurl = "{{ site.baseurl }}";
+      const homePath = baseurl + "/";
+
       navLinks.forEach((link) => {
-        // Check if the link href matches the end of the current URL
-        if (
-          link.getAttribute("href") !== "/" &&
-          currentPath.includes(link.getAttribute("href"))
-        ) {
-          link.classList.add("active-nav");
-        } else if (
-          link.getAttribute("href") === "/" &&
-          (currentPath === "/" || currentPath.endsWith("index.html"))
-        ) {
-          link.classList.add("active-nav");
+        const href = link.getAttribute("href");
+
+        if (href === homePath) {
+          if (currentPath === homePath || currentPath === baseurl + "/index.html") {
+            link.classList.add("active-nav");
+          }
+        }
+        else {
+          if (currentPath.startsWith(href)) {
+            link.classList.add("active-nav");
+          }
         }
       });
     });
